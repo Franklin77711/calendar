@@ -20,6 +20,10 @@ body{
     margin: 0 3em ;
     font-size: 3em;
 }
+#current-date{
+    word-spacing: 3em;
+}
+
 #month-switcher{
     cursor: pointer;
     display: flex;
@@ -34,16 +38,18 @@ body{
     text-align: center;
 }
 
-#day-names{
+.day-names-list-ul{
     margin: 2em 0;
     display: flex;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 #day-names li{
     background-color: transparent;
 }
 
-#days-num{
+.day-list-ul{
     display: flex;
     flex-wrap: wrap;
     row-gap: 2em;
