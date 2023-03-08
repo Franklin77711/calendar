@@ -7,11 +7,12 @@ body{
 
 #calendar-wrapper{
     width: 70em;
-    height: 40em;
+    height: 45em;
     background-color: aliceblue;
     margin-top: 3em;
-    padding: 2em;
+    padding-top: 2em;
     border-radius: 5%;
+    position: relative;
 }
 
 #calendar-nav{
@@ -55,13 +56,14 @@ body{
     row-gap: 2em;
 }
 
-#days-num li{
+.currmonth{
     cursor: pointer;
     position: relative;
     z-index: 1;
+    
 }
 
-#days-num li::before{
+.currmonth:before{
     position: absolute;
     content: "";
     z-index: -1;
@@ -73,7 +75,7 @@ body{
     transform: translate(-50%, -50%);
 
 }
-#days-num li:hover::before{
+.currmonth:hover::before{
     background-color: lightgrey;
     opacity: 0.6;
 }
@@ -99,6 +101,52 @@ body{
 .inactive{
     opacity: 0.3;
 }
+
+#hour-div{
+    width: 99.50%;
+    height: 30%;
+    background-color: plum;
+    border: 3px solid aliceblue;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 5% 5%;
+    padding: 1em 0;
+}
+#hour-ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+#hour-ul li{
+    width: calc(100% / 4);
+    height: 3em;
+    border: 2px solid aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.free{
+    background-color: #99FF99;
+    cursor: pointer;
+}
+.free:hover{
+    background-color: rgba(153, 255, 153, 0.7)
+}
+
+.reserved{
+    background-color: #FF9999;
+}
+.show{
+    display: block;
+}
+.nowshow{
+    display: none;
+}
+
 
 
 
